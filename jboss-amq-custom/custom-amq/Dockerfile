@@ -5,7 +5,7 @@ USER root
 
 # Prometheus JMX exporter agent
 RUN mkdir -p /opt/prometheus/etc \
-    && curl http://central.maven.org/maven2/io/prometheus/jmx/jmx_prometheus_javaagent/0.10/jmx_prometheus_javaagent-0.10.jar \
+    && curl http://central.maven.org/maven2/io/prometheus/jmx/jmx_prometheus_javaagent/0.11.0/jmx_prometheus_javaagent-0.11.0.jar \
         -o /opt/prometheus/jmx_prometheus_javaagent.jar
 ADD prometheus-config.yml /opt/prometheus/prometheus-config.yml
 RUN chmod 444 /opt/prometheus/jmx_prometheus_javaagent.jar \
